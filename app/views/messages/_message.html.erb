@@ -1,1 +1,1 @@
-<li><strong><%= message.user.name %>:</strong> <%= message.body %></li>
+<li><%= image_tag message.user.avatar_url, :class => "avatar", :title => message.user.name %><%= simple_format message.body %></li>

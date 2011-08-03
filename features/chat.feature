@@ -20,5 +20,5 @@ Feature: Chat
     And I fill in "Body" with "Hello, world!"
     And I press "Send"
     And I wait 2 seconds
-    Then I should see "danielmorrison: Hello, world!"
-    And I should see "danielmorrison: Hello, world!" in Steve's browser
+    Then I should see "Hello, world!"
+    And I should see "Hello, world!" in Steve's browser

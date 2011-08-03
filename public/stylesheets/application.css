@@ -1,0 +1,73 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Palatino, Georgia, "Times New Roman", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  background-color: #EEEEEE;
+  color: #000000;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #003399;
+}
+
+nav {
+  height: 60px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 60px;
+  border-bottom: solid 1px #DDDDDD;
+  background-color: #FFFFFF;
+  text-align: left;
+}
+
+nav #avatar {
+  float: left;
+  margin: 6px 0 0 6px;
+  padding: 0;
+}
+
+nav > a {
+  float: left;
+  margin: 0;
+  padding: 0 12px;
+}
+
+#messages {
+  list-style: none;
+  width: 800px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+#messages > li {
+  margin: 0 0 10px 0;
+  padding: 0;
+  border: solid 1px #DDDDDD;
+  background-color: #FFFFFF;
+  text-align: left;
+  position: relative;
+}
+
+#messages > li > .avatar {
+  float: left;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+#messages > li > p {
+  line-height: 30px;
+  margin: 15px 12px 15px 66px;
+  padding: 0;
+}
+
+footer {
+  height: 60px;
+}
