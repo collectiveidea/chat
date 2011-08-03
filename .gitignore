@@ -1,5 +1,6 @@
 .bundle
 .rvmrc
+config/application.yml
 config/database.yml
 db/*.sqlite3
 log/*.log
