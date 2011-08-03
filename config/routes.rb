@@ -6,5 +6,7 @@ Chat::Application.routes.draw do
   get "auth/failure" => "sessions#create", :success => false
   get "auth/twitter" => proc{ [404, {}, []] }
 
-  resources :messages, :only => [:index, :create, :destroy]
+  resources :messages, :only => [:create, :destroy]
+
+  root :to => "messages#index"
 end
