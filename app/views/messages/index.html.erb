@@ -1,8 +1,18 @@
-<ul>
-  <% @messages.each do |message| %>
-    <li>
-      <strong><%= message.user.name %>:</strong>
-      <%= message.body %>
-    </li>
+<%= javascript_include_tag "http://js.pusherapp.com/1.8/pusher.min.js" %>
+<%= javascript_tag do %>
+  var pusher = new Pusher("<%= ENV["PUSHER_KEY"] %>");
+  var channel = pusher.subscribe("chat");
+  channel.bind("message", function(message){ $("#messages").prepend(message); });
+<% end %>
+
+<% if @message %>
+  <%= form_for @message, :remote => true do |form| %>
+    <%= form.label :body %><br />
+    <%= form.text_area :body %><br />
+    <%= form.submit "Send" %>
   <% end %>
+<% end %>
+
+<ul id="messages">
+  <%= render @messages %>
 </ul>
