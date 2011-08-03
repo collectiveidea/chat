@@ -6,6 +6,7 @@ gem "pg", :group => :production
 
 gem "jquery-rails", "~> 1.0.12"
 gem "pusher", "~> 0.8.2"
+gem "omniauth", :git => "https://github.com/intridea/omniauth.git"
 
 group :development, :test do
   gem "sqlite3"
