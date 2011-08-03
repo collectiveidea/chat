@@ -3,7 +3,7 @@ class MessagesController < ApplicationController
 
   def index
     @message = current_user && current_user.messages.build
-    @messages = Message.new_to_old
+    @messages = Message.new_to_old.limit(100)
   end
 
   def create
