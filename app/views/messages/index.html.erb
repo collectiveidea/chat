@@ -1,5 +1,8 @@
 <ul>
   <% @messages.each do |message| %>
-    <li><%= message %></li>
+    <li>
+      <strong><%= message.user.name %>:</strong>
+      <%= message.body %>
+    </li>
   <% end %>
 </ul>
