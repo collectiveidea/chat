@@ -15,4 +15,5 @@ group :development, :test do
   gem "database_cleaner", "~> 0.6.7"
   gem "factory_girl_rails", "~> 1.1.0"
   gem "rspec-rails", "~> 2.6.1"
+  gem "capybara-webkit", :git => "https://github.com/thoughtbot/capybara-webkit.git"
 end
