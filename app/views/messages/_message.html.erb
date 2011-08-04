@@ -1,1 +1,3 @@
-<li><%= image_tag message.user.avatar_url, :class => "avatar", :title => message.user.name %><%= simple_format message.body %></li>
+<% cache message do %>
+<li><%= avatar message.user %><%= simple_format message.body %></li>
+<% end %>

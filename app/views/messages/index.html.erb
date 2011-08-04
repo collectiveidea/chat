@@ -7,13 +7,13 @@
 
 <% if @message %>
   <%= form_for @message, :remote => true do |form| %>
-    <%= image_tag current_user.avatar_url, :class => "avatar", :title => current_user.name %>
+    <%= avatar current_user %>
     <%= form.label :body %><br />
     <%= form.text_field :body %><br />
     <%= form.submit "Send" %>
   <% end %>
 <% end %>
 
-<ul id="messages">
-  <%= render @messages %>
-</ul>
+<% cache "messages" do %>
+<ul id="messages"><%= render @messages %></ul>
+<% end %>

@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
     if message.save
       payload = render_to_string(:partial => "messages/message.html", :locals => {:message => message})
       Pusher["chat"].trigger("message", payload)
+      expire_fragment("messages")
     else
       head :unprocessable_entity
     end
