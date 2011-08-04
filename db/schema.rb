@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110803165723) do
+ActiveRecord::Schema.define(:version => 20110804144839) do
 
   create_table "messages", :force => true do |t|
     t.integer  "user_id"
@@ -18,6 +18,9 @@ ActiveRecord::Schema.define(:version => 20110803165723) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "messages", ["created_at"], :name => "index_messages_on_created_at"
+  add_index "messages", ["user_id"], :name => "index_messages_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
@@ -28,5 +31,8 @@ ActiveRecord::Schema.define(:version => 20110803165723) do
     t.datetime "updated_at"
     t.string   "token"
   end
+
+  add_index "users", ["token"], :name => "index_users_on_token", :unique => true
+  add_index "users", ["twitter_uid"], :name => "index_users_on_twitter_uid", :unique => true
 
 end
