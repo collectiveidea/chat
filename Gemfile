@@ -3,7 +3,10 @@ source "http://rubygems.org"
 gem "rails", "3.0.9"
 gem "rake", "0.8.7"
 
-gem "pg", :group => :production
+group :production do
+  gem "pg"
+  gem "dalli", "~> 1.0.5"
+end
 
 gem "jquery-rails", "~> 1.0.12"
 gem "pusher", "~> 0.8.2"
