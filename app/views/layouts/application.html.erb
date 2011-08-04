@@ -8,14 +8,16 @@
 </head>
 <body>
 
-<nav>
-  <% if current_user %>
-    <%= image_tag current_user.avatar_url, :id => "avatar", :title => current_user.name %>
-    <%= link_to "Log out", logout_path, :method => :delete %>
-  <% else %>
-    <%= link_to "Log in", login_path %>
-  <% end %>
-</nav>
+<header>
+  <h1>Collective Chat</h1>
+  <nav>
+    <% if current_user %>
+      <%= link_to "Log out", logout_path, :method => :delete %>
+    <% else %>
+      <%= link_to "Log in", login_path %>
+    <% end %>
+  </nav>
+</header>
 
 <%= yield %>
 

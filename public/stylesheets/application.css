@@ -4,6 +4,7 @@ html, body {
   font-family: Palatino, Georgia, "Times New Roman", Times, serif;
   -webkit-font-smoothing: antialiased;
   font-size: 18px;
+  line-height: 30px;
   background-color: #EEEEEE;
   color: #000000;
   text-align: center;
@@ -14,7 +15,7 @@ a {
   color: #003399;
 }
 
-nav {
+header {
   height: 60px;
   margin: 0 0 20px 0;
   padding: 0;
@@ -24,16 +25,65 @@ nav {
   text-align: left;
 }
 
-nav #avatar {
+header > h1 {
   float: left;
-  margin: 6px 0 0 6px;
+  font-size: 18px;
+  line-height: 60px;
+  margin: 0 0 0 15px;
   padding: 0;
 }
 
-nav > a {
+header > nav > a {
   float: left;
+  margin: 0 0 0 15px;
+  padding: 0;
+}
+
+#new_message {
+  background-color: #FFFFFF;
+  border: solid 1px #DDDDDD;
+  width: 800px;
+  height: 60px;
+  margin: 0 auto 10px auto;
+  padding: 0;
+  text-align: left;
+  position: relative;
+}
+
+#new_message > .avatar {
   margin: 0;
-  padding: 0 12px;
+  padding: 0;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+#new_message > label {
+  position: absolute;
+  visibility: hidden;
+}
+
+#new_message > input[type="text"] {
+  position: absolute;
+  border: none;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0;
+  top: 15px;
+  left: 66px;
+  width: 640px;
+  height: 30px;
+  font-family: Palatino, Georgia, "Times New Roman", Times, serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+}
+
+#new_message > input[type="submit"] {
+  position: absolute;
+  top: 15px;
+  left: 720px;
+  width: 64px;
+  height: 30px;
 }
 
 #messages {
@@ -54,7 +104,6 @@ nav > a {
 }
 
 #messages > li > .avatar {
-  float: left;
   margin: 0;
   padding: 0;
   position: absolute;
@@ -63,7 +112,6 @@ nav > a {
 }
 
 #messages > li > p {
-  line-height: 30px;
   margin: 15px 12px 15px 66px;
   padding: 0;
 }
