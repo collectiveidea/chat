@@ -10,7 +10,7 @@
     <%= avatar current_user %>
     <%= form.label :body %><br />
     <%= form.text_field :body %><br />
-    <%= form.submit "Send" %>
+    <%= form.submit "Send", :disable_with => "Sending" %>
   <% end %>
 <% end %>
 
