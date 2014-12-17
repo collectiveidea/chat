@@ -16,7 +16,7 @@ gem "omniauth", :git => "https://github.com/intridea/omniauth.git"
 
 group :development, :test do
   gem "sqlite3"
-  gem "cucumber-rails", "~> 1.0.2"
+  gem "cucumber-rails", "~> 1.0.2", require: false
   gem "database_cleaner", "~> 0.6.7"
   gem "factory_girl_rails", "~> 1.1.0"
   gem "rspec-rails", "~> 2.6.1"
